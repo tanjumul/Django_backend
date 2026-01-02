@@ -8,7 +8,7 @@ def index(response):
 
 
 def item(request):
-    return HttpResponse('This is an it section')
+    return HttpResponse('<h1>This is an it section</h1>')
 
 def writting(hobby):
     return HttpResponse('Blog site ')
