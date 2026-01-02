@@ -12,4 +12,4 @@ source <environment_name>/bin/activate
 <environment_name>\Scripts\activate
 
 # Deactivate virtual environment
-deactivate```
+deactivate
