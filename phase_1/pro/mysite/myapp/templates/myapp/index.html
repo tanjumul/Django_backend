@@ -1,4 +1,11 @@
 
-{%for item in item_list%}
-    <h1> {{item.item_name}} --  {{item.item_desc}} <br> </h1>
+
+<ul>
+    {%for item in item_list%}
+    <li>
+
+    {{item.item_name}} --  {{item.item_desc}} <br> 
 {%endfor%} 
+
+    </li>
+</ul> 

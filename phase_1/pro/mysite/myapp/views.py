@@ -5,11 +5,14 @@ from . models import Item
 # Create your views here.
 
 def index(response):
+    #taking data from database
     item_list = Item.objects.all()
+    #making a context using lists
     context ={ 
               'item_list': item_list
               }
     # return HttpResponse(item_lists)
+    #returing as render from the html page from templete section
     return render(response,"myapp/index.html",context)
 
 def item(request):
