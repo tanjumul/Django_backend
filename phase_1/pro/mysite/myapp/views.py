@@ -19,7 +19,11 @@ def index(response):
 
 def details(response,id): 
            item = Item.objects.get(id=id) 
-           return render(response,'myapp/detail.html')
+           context = { 
+                      'item':item #here item is the variable of the database here see in the upper line
+                      }
+           return render(response,'myapp/detail.html',context)
+       
            #return HttpResponse(f'This is details of {item}')
 
 

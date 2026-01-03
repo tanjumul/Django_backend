@@ -3,9 +3,9 @@
 <ul>
     {%for item in item_list%}
     <li>
-
-    {{item.item_name}} --  {{item.item_desc}} <br> 
+     <a href="/myapp/{{item.id}}">{{item.item_name}} --  {{item.item_desc}} <br> </a> </li>
+    
 {%endfor%} 
 
-    </li>
+    
 </ul> 
