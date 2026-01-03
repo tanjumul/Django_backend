@@ -12,4 +12,5 @@ def item(request):
 
 def writting(hobby):
     return HttpResponse('Blog site ')
+
     
