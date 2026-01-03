@@ -8,4 +8,5 @@ class Items(models.Model):
     item_price = models.IntegerField()
     item_disc = models.IntegerField()
    
+    #you may need to migrate the server to initialize the whold structure to your settings's installed apps to initialize the dbs
     
