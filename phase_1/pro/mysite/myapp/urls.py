@@ -6,5 +6,6 @@ urlpatterns = [
     path('',views.index),
     path('item/',views.item),
     path('blog/',views.writting),
+    path('<int:id>/',views.details)
 ]
 
