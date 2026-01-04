@@ -3,7 +3,8 @@
 <ul>
     {%for item in item_list%}
     <li>
-     <a href="/myapp/{{item.id}}">{{item.item_name}} --  {{item.item_desc}} <br> </a> </li>
+     <a href="{% url 'detail' item.id%}">   <!--use here the name = ' ' what u have used in your url.py file to make it dynamic ?-->
+        {{item.item_name}} --  {{item.item_desc}} <br> </a> </li>
     
 {%endfor%} 
 
