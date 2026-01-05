@@ -1,16 +1,21 @@
-{% extends "myapp/base.html" %}
+{% extends "myapp/base.html" %} {%block body%}
+<div>
+  {%for item in item_list%}
+  <div>
+    <div>
+      <img src="{{item.item_image}}" alt="" />
+    </div>
 
-{%block body%}
+    <div>
+      <div>{{item.item_name}}</div>
+      <div>{{item.item_price}}</div>
+      <div>{{item.item_desc}}</div>
+      <div>
+        <a href="{% url 'myapp:detail' item.id%}">View Details</a>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
 
-<ul>
-    {%for item in item_list%}
-    <li>
-     <a href="{% url 'myapp:detail' item.id%}">   <!--use here the name = ' ' what u have used in your url.py file to make it dynamic ?-->
-        {{item.item_name}} --  {{item.item_desc}} <br> <img src="{{item.item_image}}" alt=""> </a> </li>
-    
-{%endfor%} 
-
-    
-</ul> 
-
-{% endblock %}
+  {% endblock %}
+</div>
