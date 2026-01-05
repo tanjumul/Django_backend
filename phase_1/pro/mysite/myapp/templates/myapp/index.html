@@ -1,9 +1,10 @@
-{% extends "myapp/base.html" %} {%block body%}
-<div>
-  {%for item in item_list%}
-  <div>
+{% extends "myapp/base.html" %}
+{% block body %}
+<div class=" ">  <!-- Changed: Added flex container -->
+  {% for item in item_list %}
+  <div class='flex m-10 bg-yellow-200 '>  
     <div>
-      <img src="{{item.item_image}}" alt="" />
+      <img src="{{item.item_image}}" alt="" class="w-64" />  <!-- Changed: Added w-full -->
     </div>
 
     <div>
@@ -14,8 +15,7 @@
         <a href="{% url 'myapp:detail' item.id%}">View Details</a>
       </div>
     </div>
-    {%endfor%}
-  </div>
-
-  {% endblock %}
-</div>
+  </div>  <!-- Changed: Moved closing div here -->
+  {% endfor %}
+</div>  <!-- Changed: Added closing div for flex container -->
+{% endblock %}
