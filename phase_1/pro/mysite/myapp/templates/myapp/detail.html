@@ -1,8 +1,26 @@
-{% extends "myapp/base.html" %}
+{% extends "myapp/base.html" %} {% block body %}
 
-{% block body %}
-<h1>{{item.item_name}}</h1> 
-<h1>{{item.item_price}}</h1> 
-<h1>{{item.item_desc}}</h1> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFoodApp</title>
+  </head>
+  <body>
+    <div class="m-8 flex ">
+      <div><img class="w-128 rounded-lg" src="{{item.item_image}}" alt="" /></div>
+      <div class="m-16 space-y-2">
+        <div class="font-bold text-4xl">{{item.item_name}}</div>
+        <div class="text-green-600 font-bold text-2xl">${{item.item_price}}</div>
+        <div class="">{{item.item_desc}}</div>
+        <div>
+   <a class = "font-bold text-white bg-yellow-500 px-4 py-2 rounded-lg">edit</a>
+   <a class = "font-bold text-white bg-red-500 px-4 py-2 rounded-lg">delete</a>
+</div>
+      </div>
+    </div>
+  </body>
+</html>
 
 {% endblock %}
