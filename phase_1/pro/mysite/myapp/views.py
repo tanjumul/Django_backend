@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . models import Item
+from . forms import ItemForm
 
 # Create your views here.
 
@@ -28,11 +29,9 @@ def details(response,id):
 
 
 
-
-def item(request):
-    return HttpResponse('<h1>This is an it section</h1>')
-
-def writting(hobby):
-    return HttpResponse('Blog site ')
-
-    
+def create_item(request):
+    form = ItemForm()
+    context = { 
+        'form':form
+    }
+    return render(request,'myapp/item-form.html', context)
