@@ -34,4 +34,5 @@ def create_item(request):
     context = { 
         'form':form
     }
-    return render(request,'myapp/item-form.html', context)
+    # return render(request,'myapp/item-form.html', context)
+    return render(request, 'myapp/item-form.html',context)
